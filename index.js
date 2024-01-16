@@ -2,11 +2,13 @@ const express = require('express');
 const app =express()
 const connectDb= require('./db')
 const userRoutes = require('./routes/userRoutes')
+const userSetting = require('./routes/settingRoutes')
 
 
 
 app.use(express.json())
 app.use(userRoutes);
+app.use(userSetting)
 
 
 //localhost 
